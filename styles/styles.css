@@ -31,7 +31,7 @@ body {
 }
 
 #welcome {
-    background-image: url("/img/fintess-room__.jpg"); /* Добавьте свою фоновую картинку */
+    background-image: url("../img/fintess-room__.jpg"); /* Добавьте свою фоновую картинку */
     background-size: cover;
     background-position: center;
     height: 160vh;
@@ -153,7 +153,7 @@ body {
 
 /* Заголовок */
 #header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("background.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../background.jpg");
     background-position: center;
     background-size: cover;
     height: 250px;
