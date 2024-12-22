@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы | Тим Фит</title>
+    <link rel="stylesheet" href="..\styles\reviews.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <h1>TIM Fit</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Тренировки</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="cabinet.html">Личный Кабинет</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Отзывы -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2>Что говорят наши клиенты</h2>
+            
+            <!-- Слайдер -->
+            <div class="slider">
+                <button class="btn prev" onclick="showPrevSlide()">❮</button>
+                <div class="slide active">
+                    <img src="..\img\kid-image.jpeg" alt="Отзыв клиента">
+                    <p>"Отличный клуб! Персонал всегда приветлив, оборудование современное, атмосфера супер!"</p>
+                    <span>- Анна Иванова</span>
+                </div>
+                <div class="slide">
+                    <img src="..\img\fitness-room_.png" alt="Отзыв клиента">
+                    <p>"Тренировки здесь проходят на высшем уровне! Отличные тренеры, всегда помогают достичь цели."</p>
+                    <span>- Иван Петров</span>
+                </div>
+                <div class="slide">
+                    <img src="..\img\dumbbells.jpg" alt="Отзыв клиента">
+                    <p>"Прекрасное место для занятий спортом! Чистота, порядок, удобное расписание – всё на высоте!"</p>
+                    <span>- Мария Сидорова</span>
+                </div>
+                <button class="btn next" onclick="showNextSlide()">❯</button>
+            </div>
+        </div>
+    </section>
+    <form action="https://webk.telegram.org/" method="get"></form>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Свяжитесь с нами</h2>
+                <form action="https://webk.telegram.org/" method="get">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="Ваш email" required>
+                    <textarea placeholder="Сообщение"></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </section>
+    
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Тим Фит. Все права защищены.</p>
+        </div>
+    </footer>
+    
+    <!-- Скрипт для слайдера -->
+    <script src="..\js\reviews.js"></script>
+</body>
+</html>

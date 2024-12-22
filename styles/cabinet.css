@@ -1,0 +1,108 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+aside.photo-gallery {
+    width: 300px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Стиль шапки */
+.header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.header li {
+    margin-right: 20px;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+/* Подвал */
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 15px;
+    /* Добавляем отступ снизу для того, чтобы футер был ниже */
+    margin-top: 40px; 
+}
+
+.h2 {
+    text-align: center;
+}
+
+/* Стилизация секции профиля */
+.profile-section {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.profile-info {
+    flex: 1;
+}

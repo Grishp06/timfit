@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата тарифа</title>
+    <link rel="stylesheet" href="..\styles\payment.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Оплата тарифа</h1>
+        <form action="/payment-processing-url" method="post">
+            <label for="amount">Сумма:</label>
+            <input type="text" id="amount" name="amount" value="8000" readonly>
+            
+            <p>Выберите способ оплаты:</p>
+            <div class="payment-methods">
+                <input type="radio" id="card" name="method" value="card">
+                <label for="card">Банковская карта</label><br>
+                
+                <input type="radio" id="phone" name="method" value="phone">
+                <label for="phone">Номер телефона</label><br>
+                
+                <input type="radio" id="qr-code" name="method" value="qr-code">
+                <label for="qr-code">QR-код</label><br>
+            </div>
+            
+            <!-- Вставка формы для банковской карты -->
+            <div class="card-details" style="display:none;">
+                <label for="card-number">Номер карты:</label>
+                <input type="text" id="card-number" name="card-number"><br>
+                
+                <label for="expiry-date">Срок действия (ММ/ГГ):</label>
+                <input type="text" id="expiry-date" name="expiry-date"><br>
+                
+                <label for="cvv">CVV/CVC:</label>
+                <input type="password" id="cvv" name="cvv"><br>
+            </div>
+            
+            <!-- Вставка формы для номера телефона -->
+            <div class="phone-number" style="display:none;">
+                <label for="phone-number">Введите номер телефона:</label>
+                <input type="tel" id="phone-number" name="phone-number">
+            </div>
+            
+            <!-- Вставка изображения QR-кода -->
+            <div class="qr-code" style="display:none;">
+                <img src="path-to-qr-code-image.jpg" alt="QR код для оплаты">
+            </div>
+            
+            <button type="submit"> <a href="https://partner.robokassa.ru/Reg?culture=ru"> Оплатить</button></a>
+        </form>
+        
+        <script>
+            // Скрипт для переключения между способами оплаты
+            const paymentMethods = document.querySelectorAll('input[name="method"]');
+            paymentMethods.forEach(method => {
+                method.addEventListener('change', () => {
+                    const cardDetails = document.querySelector('.card-details');
+                    const phoneNumber = document.querySelector('.phone-number');
+                    const qrCode = document.querySelector('.qr-code');
+                    
+                    if (method.value === 'card') {
+                        cardDetails.style.display = 'block';
+                        phoneNumber.style.display = 'none';
+                        qrCode.style.display = 'none';
+                    } else if (method.value === 'phone') {
+                        cardDetails.style.display = 'none';
+                        phoneNumber.style.display = 'block';
+                        qrCode.style.display = 'none';
+                    } else if (method.value === 'qr-code') {
+                        cardDetails.style.display = 'none';
+                        phoneNumber.style.display = 'none';
+                        qrCode.style.display = 'block';
+                    }
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
